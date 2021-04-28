@@ -1,0 +1,142 @@
+html{
+  font-size: 102.5%;
+  box-sizing: border-box;
+
+}
+body,#root{
+  height: 100vh;
+  margin: 0;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: "header" 
+  "main"
+  "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+header{
+  grid-area:header;
+  background-color: #203040;
+  color:#FFFF;  
+  display:flex;
+  align-items: center;
+
+}
+header a{
+  color:#FFFF;
+  font-size: 2rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+header a:hover{
+  color: #ffc000;
+}
+main{
+  grid-area: main;
+  
+
+}
+footer{
+  grid-area: footer;
+  background-color: #203040;
+  color:#FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conntent{
+  display:flex;
+  flex-wrap:wrap;
+}
+.main{
+  flex:3 60rem;
+  text-align: center;
+}
+.Sidebar{
+  flex:1 20rem
+}
+.ShopCArd{
+
+width: 2rem;
+border-radius: 1rem;
+text-align: center;
+background-color: white;
+color: black;
+font-weight: bold;
+
+
+}
+.Shopping_Cart:hover{
+  cursor: pointer;
+}
+/*products*/
+
+ .Products{
+  display: grid;
+grid-template-columns: repeat(3,.5fr);
+  list-style-type: none;} 
+  .Products li{
+    margin-bottom: 1rem;
+  }
+  .Product a{
+    text-decoration: none;
+  }
+  .Product a:hover{
+    color: #ffc000;
+  }
+.Product img{
+  width: 18rem;
+  height: 21rem;
+  transition: all .4s ease-in-out;}
+.Product img:hover{
+  transform: scale(1.1);
+}
+.Product-Price{
+  display: flex;
+justify-content: space-around;}
+.Product-Price div{
+  font-size: 2rem;
+}
+button{
+  padding: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+button:hover{
+  border: 0.1rem #808080 solid;
+}
+.Add_Button{
+  background-color: #ffc000;}
+  .Filter{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.1rem gray solid;
+    padding: 1rem;
+    font-size: 1.2rem;
+
+  }
+  /* Modal*/
+  .exit-item:hover{
+    cursor: pointer;
+  }
+
+@media (max-width:950px)
+{
+  .Products{
+    grid-template-columns: repeat(2,.5fr);
+  }
+}
+
+@media (max-width:645px)
+{
+  .Products{
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    text-align: center;
+  }
+}
